@@ -20,3 +20,15 @@ def Reverse(number):
     print(number, end=" ")
     if number > 0:
         Reverse(number-1)
+
+# Возводит число base в степень degree (рекурсивно)
+def Exponentiation(base,degree):
+    if degree == 0:
+        return 1
+    return base * Exponentiation(base,degree-1)
+
+# Складывает числа A и B, используя только операции +1 и -1
+def SumWithPlusOrMinus(A,B):
+    if A == 0:
+        return B
+    return SumWithPlusOrMinus(A-1,B+1)
