@@ -32,3 +32,11 @@ def SumWithPlusOrMinus(A,B):
     if A == 0:
         return B
     return SumWithPlusOrMinus(A-1,B+1)
+
+# Возвращает сумму делителей числа (не включая 1 и само число)
+def SumOfDivisors(number):
+    sum = 1
+    for i in range(2,(number//2)+1):
+        if number % i == 0:
+            sum += i
+    return sum
