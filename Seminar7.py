@@ -55,22 +55,10 @@
 # 2.5 10
 
 # import math
-# def notCircle(orbit):
-#     if (orbit[0] == orbit[1]):
-#         return False
-#     else:
-#         return True
-# def find_farthest_orbit(orbits):
-#     orbits = filter(notCircle,orbits)
-#     maxS = 0
-#     maxD = []
-#     for item in orbits:
-#         if math.pi*item[0]*item[1] > maxS:
-#             maxS = math.pi*item[0]*item[1]
-#             maxD = item
-#     return maxD
 # orbits = [(1, 3), (2.5, 10), (7, 2), (6, 6), (4, 3)]
-# print(*find_farthest_orbit(orbits))
+# lorbits = filter(lambda item: item[0] != item[1],orbits)
+# sorbits = list(map(lambda item: math.pi*item[0]*item[1],lorbits))
+# print(*orbits[sorbits.index(max(sorbits))])
 
 # Задача №51. Решение в группах
 # Напишите функцию same_by(characteristic, objects), которая
@@ -94,8 +82,8 @@ def same_by(func,values):
             return False
     return True
 
-values = [0, 2, 10, 6]
-if same_by(lambda x: x % 2, values):
-    print("same")
-else:
-    print("different")
+# values = [0, 2, 10, 6]
+# if same_by(lambda x: x % 2, values):
+#     print("same")
+# else:
+#     print("different")
